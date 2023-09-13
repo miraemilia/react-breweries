@@ -1,6 +1,6 @@
 # Breweries App
 
-An Integrify Academy exercise for the Frontend module. The goal was to create a React/Typescript app that would fetch, display, and search for brewery data from an [https://www.openbrewerydb.org/documentation](API endpoint).
+An Integrify Academy exercise for the Frontend module. The goal was to create a React/Typescript app that would fetch, display, and search for brewery data from an [API endpoint](https://www.openbrewerydb.org/documentation).
 
 ## Technologies
 - React
@@ -16,10 +16,10 @@ An Integrify Academy exercise for the Frontend module. The goal was to create a 
 - [ ] Styling with MaterialUI
 - [ ] Deploy
 - [x] README.md
-- [ ] /(Optional) Performance optimization
-- [ ] /(Optional) Use API query options to sort & limit, pagination
-- [ ] /(Optional) Contact form
-- [ ] /(Optional) Google-login pre-fill
+- [ ] _Performance optimization_
+- [ ] _Use API query options to sort & limit, pagination_
+- [ ] _Contact form_
+- [ ] _Google-login pre-fill_
 
 ## Running the code
 
@@ -27,5 +27,5 @@ An Integrify Academy exercise for the Frontend module. The goal was to create a 
 - Node
 
 ### Steps
-1. After cloning the project, run npm install
-2. Run npm start
+1. After cloning the project, run ```npm install```
+2. Run ```npm start```
