@@ -9,13 +9,16 @@ export const Main = ({ breweries } : MainProps) => {
     <div>
         <h1>Brewery list</h1>
         {breweries && 
-            <ul>
+            <div>
                 {breweries.map(b => 
-                    <li>
-                        {b.name}
-                    </li>
+                    <div id={b.id}>
+                    <h3>{b.name}</h3>
+                    <p>{b.country} - {b.state_province} - {b.city}</p>
+                    <p>Brewery type: {b.brewery_type}</p>
+                    <a href={b.website_url}>{b.name} website</a>
+                    </div>
                 )}
-            </ul>
+            </div>
         }
     </div>
   )
