@@ -8,7 +8,7 @@ type MainProps = {
 export const Main = ({ breweries } : MainProps) => {
   return (
     <div>
-        <h1>Brewery list</h1>
+        <h2>Brewery list</h2>
         {breweries && 
             <div>
                 {breweries.map(b => 
