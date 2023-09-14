@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react"
 import { Brewery } from "../types"
+import { useParams } from "react-router-dom"
 
 export const SingleBrewery = () => {
 
+    const breweryId = useParams().id
+
     const [messageOne, setMessageOne] = useState<string>('')
-    const [breweryId, setBreweryId] = useState<string | undefined>('5128df48-79fc-4f0f-8b52-d06be54d0cec')
     const [brewery, setBrewery] = useState<Brewery | undefined>(undefined)
 
     const getOneBrewery = async () => {

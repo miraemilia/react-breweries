@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { Brewery } from "../types"
 
 type ItemProps = {
@@ -9,8 +10,7 @@ export const BreweryListItem = ({ brewery } : ItemProps) => {
     <div key={brewery.id}>
       <h3>{brewery.name}</h3>
       <p>{brewery.country} - {brewery.state_province} - {brewery.city}</p>
-      <p>Brewery type: {brewery.brewery_type}</p>
-      <a href={brewery.website_url}>{brewery.name} website</a>
+      <Link to={`/${brewery.id}`}>Details</Link>
     </div>
   )
 }

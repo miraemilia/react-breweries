@@ -39,7 +39,7 @@ const App = () => {
       <Header />
         <Routes>
           <Route path="/" element={<BreweryList breweries={breweries} messageAll={messageAll}/>} />
-          <Route path="/id" element={<SingleBrewery />} />
+          <Route path="/:id" element={<SingleBrewery />} />
           <Route path="/about" element={<About />} />
         </Routes>
       <Footer />
