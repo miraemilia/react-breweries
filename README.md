@@ -10,8 +10,8 @@ An Integrify Academy exercise for the Frontend module. The goal was to create a 
 ## Functionalities
 - [x] Fetch data from [https://www.openbrewerydb.org/documentation](https://www.openbrewerydb.org/documentation)
 - [x] Display data
-- [ ] Router
-- [ ] Company detail page
+- [x] Router
+- [x] Company detail page
 - [ ] Search company by name
 - [ ] Styling with MaterialUI
 - [ ] Deploy
