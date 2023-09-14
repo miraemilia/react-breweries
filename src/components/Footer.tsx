@@ -1,7 +1,7 @@
 export const Footer = () => {
   return (
-    <footer>
+    <div>
         <a href='https://www.openbrewerydb.org/documentation'>Open Brewery DB</a>
-    </footer>
+    </div>
   )
 }
