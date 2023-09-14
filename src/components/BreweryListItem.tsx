@@ -6,7 +6,7 @@ type ItemProps = {
 
 export const BreweryListItem = ({ brewery } : ItemProps) => {
   return (
-    <div id={brewery.id}>
+    <div key={brewery.id}>
       <h3>{brewery.name}</h3>
       <p>{brewery.country} - {brewery.state_province} - {brewery.city}</p>
       <p>Brewery type: {brewery.brewery_type}</p>

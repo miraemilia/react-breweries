@@ -2,10 +2,10 @@ import { Navigation } from "./Navigation"
 
 export const Header = () => {
   return (
-    <div>
+    <header>
         <h1>Breweries</h1>
         <Navigation />        
-    </div>
+    </header>
 
   )
 }
