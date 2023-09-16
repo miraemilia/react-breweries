@@ -27,4 +27,4 @@ An Integrify Academy exercise for the Frontend module. The goal was to create a 
 2. Run ```npm start``````
 
 ## Deployment
-Deloyed with gh-pages at [`https://miraemilia.github.io/react-breweries/](`https://miraemilia.github.io/react-breweries/)
+Deloyed with gh-pages at [https://miraemilia.github.io/react-breweries/](`https://miraemilia.github.io/react-breweries/)
