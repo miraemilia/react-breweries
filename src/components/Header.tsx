@@ -5,9 +5,9 @@ import { NavButtonGroup } from "../styles/styledComponents";
 
 export const Header = () => {
   return (
-      <AppBar position="sticky">
+      <AppBar position="static">
         <Toolbar sx={{ display: 'flex', justifyContent: 'space-between'}}>
-          <Typography variant="h1">Breweries<Icon component={SportsBarTwoToneIcon} fontSize="inherit" /></Typography>
+        <Typography variant="h1">Breweries<Icon component={SportsBarTwoToneIcon} fontSize="inherit"/></Typography>
           <NavButtonGroup variant="contained">
             <Button component={Link} to="/">Home</Button>
             <Button component={Link} to="breweries">Brewery list</Button>

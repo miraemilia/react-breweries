@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react"
 import { Brewery } from "../../types"
-import { useParams } from "react-router-dom"
-import {Link as RouterLink} from "react-router-dom"
-import { Container, Link, Typography } from "@mui/material"
+import { useNavigate, useParams } from "react-router-dom"
+import { Button, Container, Link, Typography } from "@mui/material"
 import { BreweryCard } from "../../styles/styledComponents"
 import { ErrorPage } from "./ErrorPage"
 
 export const SingleBrewery = () => {
 
     const breweryId = useParams().id
+    const navigate = useNavigate();
+    const handleReturn = () => navigate('/breweries');
 
     const [messageOne, setMessageOne] = useState<string>('')
     const [brewery, setBrewery] = useState<Brewery | undefined>(undefined)
@@ -36,7 +37,7 @@ export const SingleBrewery = () => {
   return (
     <main>
       <Container>
-        <Link component={RouterLink} to="breweries">Back to list</Link>
+        <Button onClick={handleReturn}>Back to list</Button>
         {messageOne && <ErrorPage message={messageOne} />}
         { brewery && 
             <BreweryCard sx={{display: "flex", flexDirection: "column", width: "94%", alignItems: "center"}}>
