@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react-breweries/static/css/main.5dba4c99.css",
+    "main.js": "/react-breweries/static/js/main.5d3c9ecc.js",
+    "static/js/787.649227b4.chunk.js": "/react-breweries/static/js/787.649227b4.chunk.js",
+    "index.html": "/react-breweries/index.html",
+    "main.5dba4c99.css.map": "/react-breweries/static/css/main.5dba4c99.css.map",
+    "main.5d3c9ecc.js.map": "/react-breweries/static/js/main.5d3c9ecc.js.map",
+    "787.649227b4.chunk.js.map": "/react-breweries/static/js/787.649227b4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5dba4c99.css",
+    "static/js/main.5d3c9ecc.js"
+  ]
+}
