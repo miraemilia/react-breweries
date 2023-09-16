@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-import { ThemeProvider } from "@mui/material/styles"
+import { StyledEngineProvider, ThemeProvider } from "@mui/material/styles"
 
 import { Brewery } from "./types"
 import { Header } from "./components/Header"
@@ -38,18 +38,20 @@ const App = () => {
 
   return (
     <>
-      <ThemeProvider theme={brewerySiteTheme}>
-        <BrowserRouter>
-        <Header />
-          <Routes>
-            <Route path="/" element={<BreweryList breweries={breweries} messageAll={messageAll}/>} />
-            <Route path="/breweries/:id" element={<SingleBrewery />} />
-            <Route path="about" element={<About />} />
-            <Route path="*" element={<ErrorPage message="Page not found"/>} />
-          </Routes>
-        <Footer />
-        </BrowserRouter>
-      </ThemeProvider>
+      <StyledEngineProvider injectFirst>
+        <ThemeProvider theme={brewerySiteTheme}>
+          <BrowserRouter>
+          <Header />
+            <Routes>
+              <Route path="/" element={<BreweryList breweries={breweries} messageAll={messageAll}/>} />
+              <Route path="/breweries/:id" element={<SingleBrewery />} />
+              <Route path="about" element={<About />} />
+              <Route path="*" element={<ErrorPage message="Page not found"/>} />
+            </Routes>
+          <Footer />
+          </BrowserRouter>
+        </ThemeProvider>
+      </StyledEngineProvider>
     </>
   )
 }

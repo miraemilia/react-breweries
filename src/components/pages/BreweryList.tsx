@@ -22,7 +22,7 @@ export const BreweryList = ({ breweries, messageAll } : BreweryListProps) => {
             {breweries && 
                 <Box sx={{display: "flex", flexDirection: "column", alignItems: "center"}}>
                 <FormControl sx={{padding: "1em"}}>
-                    <InputLabel>Search breweries by name: </InputLabel>
+                    <InputLabel shrink={false} >Search breweries by name: </InputLabel>
                     <Input type="text" value={filter} onChange={(e) => setFilter(e.target.value)}/>
                 </FormControl>
                     {filteredBreweries.map(b => 

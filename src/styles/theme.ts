@@ -1,4 +1,6 @@
+import { Height } from "@mui/icons-material";
 import createTheme from "@mui/material/styles/createTheme";
+import { Component } from "react";
 
 
 export const brewerySiteTheme = createTheme({
@@ -8,8 +10,8 @@ export const brewerySiteTheme = createTheme({
             light: "#707579"
         },
         secondary: {
-            main: "#b55610",
-            light: "#cb8a03"
+            main: "#cb8a03",
+            light: "#fefbeb"
         },
         background: {
             default: "#fefbeb",
@@ -18,8 +20,7 @@ export const brewerySiteTheme = createTheme({
     },
     typography: {
         h1: {
-            fontFamily: 'Rowdies',
-            color: "#fef3c7"
+            fontFamily: 'Rowdies'
         },
         h2: {
             fontFamily: 'IBM Plex Mono',
@@ -32,11 +33,19 @@ export const brewerySiteTheme = createTheme({
         },
         button: {
             fontSize: "1.3em",
-            fontFamily: 'Rowdies'
+            fontFamily: 'Rowdies',
         },
         body1: {
             padding: "1em"
         }
+    },
+    components: {
+        MuiAppBar: {
+            styleOverrides: {
+                root: {
+                    color: "#fef3c7",
+                }
+            },
+        }
     }
-
 })
