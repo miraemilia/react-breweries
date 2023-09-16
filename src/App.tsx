@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom"
 import { StyledEngineProvider, ThemeProvider } from "@mui/material/styles"
 
 import { Brewery } from "./types"
@@ -10,6 +10,7 @@ import { SingleBrewery } from "./components/pages/SingleBrewery"
 import { About } from "./components/pages/About"
 import { brewerySiteTheme } from "./styles/theme"
 import { ErrorPage } from "./components/pages/ErrorPage"
+import { Home } from "./components/pages/Home"
 
 const App = () => {
 
@@ -40,16 +41,17 @@ const App = () => {
     <>
       <StyledEngineProvider injectFirst>
         <ThemeProvider theme={brewerySiteTheme}>
-          <BrowserRouter>
+          <HashRouter basename='/'>
           <Header />
             <Routes>
-              <Route path="/" element={<BreweryList breweries={breweries} messageAll={messageAll}/>} />
-              <Route path="/breweries/:id" element={<SingleBrewery />} />
+              <Route path="/" element={<Home />} />
+              <Route path="breweries" element={<BreweryList breweries={breweries} messageAll={messageAll}/>} />
+              <Route path="breweries/:id" element={<SingleBrewery />} />
               <Route path="about" element={<About />} />
               <Route path="*" element={<ErrorPage message="Page not found"/>} />
             </Routes>
           <Footer />
-          </BrowserRouter>
+          </HashRouter>
         </ThemeProvider>
       </StyledEngineProvider>
     </>

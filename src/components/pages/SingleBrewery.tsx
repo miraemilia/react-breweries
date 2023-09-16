@@ -36,7 +36,7 @@ export const SingleBrewery = () => {
   return (
     <main>
       <Container>
-        <Link component={RouterLink} to="/">Back to list</Link>
+        <Link component={RouterLink} to="breweries">Back to list</Link>
         {messageOne && <ErrorPage message={messageOne} />}
         { brewery && 
             <BreweryCard sx={{display: "flex", flexDirection: "column", width: "94%", alignItems: "center"}}>

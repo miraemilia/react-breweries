@@ -1,6 +1,4 @@
-import { Height } from "@mui/icons-material";
 import createTheme from "@mui/material/styles/createTheme";
-import { Component } from "react";
 
 
 export const brewerySiteTheme = createTheme({

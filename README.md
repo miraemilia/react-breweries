@@ -7,19 +7,15 @@ An Integrify Academy exercise for the Frontend module. The goal was to create a 
 - Typescript
 - MaterialUI
 
-## Functionalities
-- [x] Fetch data from [https://www.openbrewerydb.org/documentation](https://www.openbrewerydb.org/documentation)
-- [x] Display data
-- [x] Router
-- [x] Company detail page
-- [x] Search company by name
-- [x] Styling with MaterialUI
-- [ ] Deploy
-- [x] README.md
-- [ ] _Performance optimization_
-- [ ] _Use API query options to sort & limit, pagination_
-- [ ] _Contact form_
-- [ ] _Google-login pre-fill_
+## Features
+- Fetching data from [https://www.openbrewerydb.org/documentation](https://www.openbrewerydb.org/documentation)
+- Displaying all data
+- Search company by name
+- Company detail page
+- React Router
+- Styling with MaterialUI
+- README.md
+- Deployment with GitHub Pages
 
 ## Running the code
 
@@ -28,4 +24,7 @@ An Integrify Academy exercise for the Frontend module. The goal was to create a 
 
 ### Steps
 1. After cloning the project, run ```npm install```
-2. Run ```npm start```
+2. Run ```npm start``````
+
+## Deployment
+Deloyed with gh-pages at [`https://miraemilia.github.io/react-breweries/](`https://miraemilia.github.io/react-breweries/)

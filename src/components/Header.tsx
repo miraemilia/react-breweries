@@ -10,6 +10,7 @@ export const Header = () => {
           <Typography variant="h1">Breweries<Icon component={SportsBarTwoToneIcon} fontSize="inherit" /></Typography>
           <NavButtonGroup variant="contained">
             <Button component={Link} to="/">Home</Button>
+            <Button component={Link} to="breweries">Brewery list</Button>
             <Button component={Link} to="about">About</Button>
           </NavButtonGroup>         
         </Toolbar>
