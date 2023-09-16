@@ -9,6 +9,7 @@ import { BreweryList } from "./components/pages/BreweryList"
 import { SingleBrewery } from "./components/pages/SingleBrewery"
 import { About } from "./components/pages/About"
 import { brewerySiteTheme } from "./styles/theme"
+import { ErrorPage } from "./components/pages/ErrorPage"
 
 const App = () => {
 
@@ -42,8 +43,9 @@ const App = () => {
         <Header />
           <Routes>
             <Route path="/" element={<BreweryList breweries={breweries} messageAll={messageAll}/>} />
-            <Route path=":id" element={<SingleBrewery />} />
+            <Route path="/breweries/:id" element={<SingleBrewery />} />
             <Route path="about" element={<About />} />
+            <Route path="*" element={<ErrorPage message="Page not found"/>} />
           </Routes>
         <Footer />
         </BrowserRouter>

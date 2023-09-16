@@ -2,8 +2,9 @@ import { useEffect, useState } from "react"
 import { Brewery } from "../../types"
 import { useParams } from "react-router-dom"
 import {Link as RouterLink} from "react-router-dom"
-import { Container, Link } from "@mui/material"
+import { Container, Link, Typography } from "@mui/material"
 import { BreweryCard } from "../../styles/styledComponents"
+import { ErrorPage } from "./ErrorPage"
 
 export const SingleBrewery = () => {
 
@@ -36,12 +37,12 @@ export const SingleBrewery = () => {
     <main>
       <Container>
         <Link component={RouterLink} to="/">Back to list</Link>
-        {messageOne ? <p>{messageOne}</p> : <></>}
+        {messageOne && <ErrorPage message={messageOne} />}
         { brewery && 
-            <BreweryCard>
-                <h2>{brewery.name}</h2>
-                <p>{brewery.country} - {brewery.state_province} - {brewery.city}</p>
-                <p>Brewery type: {brewery.brewery_type}</p>
+            <BreweryCard sx={{display: "flex", flexDirection: "column", width: "94%", alignItems: "center"}}>
+                <Typography variant="h3">{brewery.name}</Typography>
+                <Typography>{brewery.country} - {brewery.state_province} - {brewery.city}</Typography>
+                <Typography>Brewery type: {brewery.brewery_type}</Typography>
                 <Link href={brewery.website_url}>{brewery.name} website</Link> 
             </BreweryCard>
         }

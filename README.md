@@ -13,7 +13,7 @@ An Integrify Academy exercise for the Frontend module. The goal was to create a 
 - [x] Router
 - [x] Company detail page
 - [x] Search company by name
-- [ ] Styling with MaterialUI
+- [x] Styling with MaterialUI
 - [ ] Deploy
 - [x] README.md
 - [ ] _Performance optimization_

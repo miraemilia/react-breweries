@@ -31,6 +31,7 @@ export const brewerySiteTheme = createTheme({
             fontSize: "1.8rem"
         },
         button: {
+            fontSize: "1.3em",
             fontFamily: 'Rowdies'
         },
         body1: {

@@ -15,7 +15,7 @@ export const BreweryListItem = ({ brewery } : ItemProps) => {
         <Typography>{brewery.country} - {brewery.state_province} - {brewery.city}</Typography>
       </CardContent>
       <CardActions>
-        <Button component={Link} to={`/${brewery.id}`}>Details</Button>
+        <Button component={Link} to={`/breweries/${brewery.id}`}>Details</Button>
       </CardActions>
     </BreweryCard>
   )
