@@ -1,7 +1,6 @@
 {
   "name": "breweries",
   "version": "0.1.0",
-  "homepage": "https://miraemilia.github.io/react-breweries",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.1",
@@ -27,9 +26,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "sass": "sass --watch ./src/styles/sass/style.scss:./src/styles/index.css",
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d build"
+    "sass": "sass --watch ./src/styles/sass/style.scss:./src/styles/index.css"
   },
   "eslintConfig": {
     "extends": [
@@ -48,8 +45,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "gh-pages": "^6.0.0"
   }
 }
