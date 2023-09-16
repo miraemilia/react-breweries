@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { ThemeProvider } from "@mui/material/styles"
 
 import { Brewery } from "./types"
 import { Header } from "./components/Header"
 import { Footer } from "./components/Footer"
-import { BreweryList } from "./components/BreweryList"
-import { SingleBrewery } from "./components/SingleBrewery"
-import { About } from "./components/About"
+import { BreweryList } from "./components/pages/BreweryList"
+import { SingleBrewery } from "./components/pages/SingleBrewery"
+import { About } from "./components/pages/About"
+import { brewerySiteTheme } from "./styles/theme"
 
 const App = () => {
 
@@ -35,15 +37,17 @@ const App = () => {
 
   return (
     <>
-      <BrowserRouter>
-      <Header />
-        <Routes>
-          <Route path="/" element={<BreweryList breweries={breweries} messageAll={messageAll}/>} />
-          <Route path="/:id" element={<SingleBrewery />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
-      <Footer />
-      </BrowserRouter>
+      <ThemeProvider theme={brewerySiteTheme}>
+        <BrowserRouter>
+        <Header />
+          <Routes>
+            <Route path="/" element={<BreweryList breweries={breweries} messageAll={messageAll}/>} />
+            <Route path=":id" element={<SingleBrewery />} />
+            <Route path="about" element={<About />} />
+          </Routes>
+        <Footer />
+        </BrowserRouter>
+      </ThemeProvider>
     </>
   )
 }

@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react"
-import { Brewery } from "../types"
+import { Brewery } from "../../types"
 import { useParams } from "react-router-dom"
+import {Link as RouterLink} from "react-router-dom"
+import { Container, Link } from "@mui/material"
+import { BreweryCard } from "../../styles/styledComponents"
 
 export const SingleBrewery = () => {
 
@@ -25,22 +28,24 @@ export const SingleBrewery = () => {
         }
       }
     
-      useEffect(() => {
-        getOneBrewery()
-      }, [])
+    useEffect(() => {
+      getOneBrewery()
+    }, [])
 
   return (
     <main>
+      <Container>
+        <Link component={RouterLink} to="/">Back to list</Link>
         {messageOne ? <p>{messageOne}</p> : <></>}
         { brewery && 
-            <div>
+            <BreweryCard>
                 <h2>{brewery.name}</h2>
                 <p>{brewery.country} - {brewery.state_province} - {brewery.city}</p>
                 <p>Brewery type: {brewery.brewery_type}</p>
-                <a href={brewery.website_url}>{brewery.name} website</a> 
-            </div>
-
+                <Link href={brewery.website_url}>{brewery.name} website</Link> 
+            </BreweryCard>
         }
+      </Container>
     </main>
   )
 }
