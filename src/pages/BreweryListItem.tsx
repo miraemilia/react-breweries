@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
-import { Brewery } from "../types"
 import { Button, CardActions, CardContent, Typography } from "@mui/material"
+
+import { Brewery } from "../types"
 import { BreweryCard } from "../styles/styledComponents"
 
 type ItemProps = {

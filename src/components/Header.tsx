@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import { AppBar, Typography, Toolbar, Button, Icon } from '@mui/material';
 import SportsBarTwoToneIcon from '@mui/icons-material/SportsBarTwoTone';
+
 import { NavButtonGroup } from "../styles/styledComponents";
 
 export const Header = () => {

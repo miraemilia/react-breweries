@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react"
-import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom"
+import { HashRouter, Route, Routes } from "react-router-dom"
 import { StyledEngineProvider, ThemeProvider } from "@mui/material/styles"
 
 import { Brewery } from "./types"
 import { Header } from "./components/Header"
 import { Footer } from "./components/Footer"
+import { Home } from "./pages/Home"
 import { BreweryList } from "./pages/BreweryList"
 import { SingleBrewery } from "./pages/SingleBrewery"
 import { About } from "./pages/About"
-import { brewerySiteTheme } from "./styles/theme"
 import { ErrorPage } from "./pages/ErrorPage"
-import { Home } from "./pages/Home"
+import { brewerySiteTheme } from "./styles/theme"
 
 const App = () => {
 

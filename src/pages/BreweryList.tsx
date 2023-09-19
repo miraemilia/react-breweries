@@ -1,7 +1,8 @@
 import { useState } from "react"
+import { Box, Container, FormControl, Input, InputLabel, Typography } from "@mui/material"
+
 import { Brewery } from "../types"
 import { BreweryListItem } from "./BreweryListItem"
-import { Box, Container, FormControl, Input, InputLabel, Typography } from "@mui/material"
 
 type BreweryListProps = {
     breweries: Brewery[]
