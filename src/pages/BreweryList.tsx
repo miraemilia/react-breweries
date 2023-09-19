@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Brewery } from "../../types"
+import { Brewery } from "../types"
 import { BreweryListItem } from "./BreweryListItem"
 import { Box, Container, FormControl, Input, InputLabel, Typography } from "@mui/material"
 

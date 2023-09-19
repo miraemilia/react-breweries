@@ -5,12 +5,12 @@ import { StyledEngineProvider, ThemeProvider } from "@mui/material/styles"
 import { Brewery } from "./types"
 import { Header } from "./components/Header"
 import { Footer } from "./components/Footer"
-import { BreweryList } from "./components/pages/BreweryList"
-import { SingleBrewery } from "./components/pages/SingleBrewery"
-import { About } from "./components/pages/About"
+import { BreweryList } from "./pages/BreweryList"
+import { SingleBrewery } from "./pages/SingleBrewery"
+import { About } from "./pages/About"
 import { brewerySiteTheme } from "./styles/theme"
-import { ErrorPage } from "./components/pages/ErrorPage"
-import { Home } from "./components/pages/Home"
+import { ErrorPage } from "./pages/ErrorPage"
+import { Home } from "./pages/Home"
 
 const App = () => {
 

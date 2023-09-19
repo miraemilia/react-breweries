@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
-import { Brewery } from "../../types"
+import { Brewery } from "../types"
 import { useNavigate, useParams } from "react-router-dom"
 import { Button, Container, Link, Typography } from "@mui/material"
-import { BreweryCard } from "../../styles/styledComponents"
+import { BreweryCard } from "../styles/styledComponents"
 import { ErrorPage } from "./ErrorPage"
 
 export const SingleBrewery = () => {
