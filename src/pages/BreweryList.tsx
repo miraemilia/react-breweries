@@ -26,11 +26,12 @@ export const BreweryList = ({ breweries, messageAll } : BreweryListProps) => {
                 <Box sx={{display: "flex", flexDirection: "column", alignItems: "center"}}>
                 <FormControl sx={{padding: "1em"}}>
                     <InputLabel shrink={false} >Search breweries by name: </InputLabel>
-                    <Input type="text" value={filter} onChange={(e) => handleFilterChange}/>
+                    <Input type="text" value={filter} onChange={handleFilterChange}/>
                 </FormControl>
-                    {filteredBreweries.map(b => 
-                        <BreweryListItem brewery={b}/>
-                    )}
+                    {filteredBreweries.length > 0
+                        ? filteredBreweries.map(b => <BreweryListItem brewery={b}/>)
+                        : <Typography>No matching breweries</Typography>
+                    }
                 </Box>
             }
         </Container>
