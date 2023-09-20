@@ -45,7 +45,7 @@ export const SingleBrewery = () => {
                 <Typography variant="h3">{brewery.name}</Typography>
                 <Typography>{brewery.country} - {brewery.state_province} - {brewery.city}</Typography>
                 <Typography>Brewery type: {brewery.brewery_type}</Typography>
-                <Link href={brewery.website_url}>{brewery.name} website</Link> 
+                {brewery.website_url && <Link href={brewery.website_url}>{brewery.name} website</Link>}
             </BreweryCard>
         }
       </Container>

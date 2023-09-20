@@ -5,5 +5,5 @@ export interface Brewery {
     city: string
     state_province: string
     country: string
-    website_url: string
+    website_url: string | null
 }
