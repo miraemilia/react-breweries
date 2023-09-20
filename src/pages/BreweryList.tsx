@@ -15,6 +15,8 @@ export const BreweryList = ({ breweries, messageAll } : BreweryListProps) => {
 
     const filteredBreweries : Brewery[] = breweries.filter(b => b.name.toLowerCase().includes(filter.toLowerCase()))
 
+    const handleFilterChange = (e : React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setFilter(e.target.value)
+
   return (
     <main>
         <Container>
@@ -24,7 +26,7 @@ export const BreweryList = ({ breweries, messageAll } : BreweryListProps) => {
                 <Box sx={{display: "flex", flexDirection: "column", alignItems: "center"}}>
                 <FormControl sx={{padding: "1em"}}>
                     <InputLabel shrink={false} >Search breweries by name: </InputLabel>
-                    <Input type="text" value={filter} onChange={(e) => setFilter(e.target.value)}/>
+                    <Input type="text" value={filter} onChange={(e) => handleFilterChange}/>
                 </FormControl>
                     {filteredBreweries.map(b => 
                         <BreweryListItem brewery={b}/>
