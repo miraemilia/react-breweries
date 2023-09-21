@@ -14,11 +14,18 @@ export const Contact = () => {
         message: yup.string().min(10).max(200).required()
     }).required()
 
-    const { register, handleSubmit, watch, formState: { errors } } = useForm<ContactForm>({
+    const { register, handleSubmit, watch, formState: { errors }, reset } = useForm<ContactForm>({
+        defaultValues: {
+            email: '',
+            message: ''
+        },
         resolver: yupResolver(contactSchema)
     })
 
-    const onFormSubmit: SubmitHandler<ContactForm> = (data) => console.log(data)
+    const onFormSubmit: SubmitHandler<ContactForm> = (data) => {
+        console.log(data)
+        reset()
+    }
 
     return (
         <main>
