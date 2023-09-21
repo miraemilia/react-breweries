@@ -12,6 +12,7 @@ export const Header = () => {
           <NavButtonGroup variant="contained">
             <Button component={Link} to="/">Home</Button>
             <Button component={Link} to="breweries">Brewery list</Button>
+            <Button component={Link} to="contact">Contact</Button>
             <Button component={Link} to="about">About</Button>
           </NavButtonGroup>         
         </Toolbar>

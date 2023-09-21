@@ -7,3 +7,8 @@ export interface Brewery {
     country: string
     website_url: string | null
 }
+
+export interface ContactForm {
+    email: string
+    message: string
+}

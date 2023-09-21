@@ -8,9 +8,11 @@ import { Footer } from "./components/Footer"
 import { Home } from "./pages/Home"
 import { BreweryList } from "./pages/BreweryList"
 import { SingleBrewery } from "./pages/SingleBrewery"
+import { Contact } from "./pages/Contact"
 import { About } from "./pages/About"
 import { ErrorPage } from "./pages/ErrorPage"
 import { brewerySiteTheme } from "./styles/theme"
+
 
 const App = () => {
 
@@ -47,6 +49,7 @@ const App = () => {
               <Route path="/" element={<Home />} />
               <Route path="breweries" element={<BreweryList breweries={breweries} messageAll={messageAll}/>} />
               <Route path="breweries/:id" element={<SingleBrewery />} />
+              <Route path="contact" element={<Contact />} />
               <Route path="about" element={<About />} />
               <Route path="*" element={<ErrorPage message="Page not found"/>} />
             </Routes>
